@@ -31,17 +31,17 @@ class _MyAppState extends State<MyApp> {
   //Core widget
   @override
   Widget build(BuildContext context) {
-    var questions = [
+    const questions = [
       {
-        'questionText': 'Whats your favorite color?',
+        'questionText': 'What\'s your favorite color?',
         'answers': ['Black', 'Red', 'Green', 'White'],
       },
       {
-        'questionText': 'Whats your favorite animal?',
+        'questionText': 'What\'s your favorite animal?',
         'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
       },
       {
-        'questionText': 'Whos your favorite instructor?',
+        'questionText': 'Who\'s your favorite instructor?',
         'answers': ['Max', 'Gunnar', 'Hjalti', 'Mónika'],
       },
     ];
