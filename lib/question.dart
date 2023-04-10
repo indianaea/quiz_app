@@ -16,6 +16,6 @@ class Question extends StatelessWidget {
         style: TextStyle(fontSize: 28),
         textAlign: TextAlign.center,
       ),
-    ); // prufa
+    );
   }
 }
