@@ -25,11 +25,17 @@ class Result extends StatelessWidget {
     return Center(
       child: Column(
         children: <Widget>[
-          Text(
-            resultPhrase,
-            style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
-            textAlign: TextAlign.center,
+          Padding(
+            padding: EdgeInsets.only(top: 30.0),
+            child: Text(
+              resultPhrase,
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+              textAlign: TextAlign.center,
+            ),
           ),
           TextButton(
             child: Text(
