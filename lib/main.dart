@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animated_background/animated_background.dart';
 
 import './quiz.dart';
 import './result.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatefulWidget {
   }
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   final _questions = const [
     {
       'questionText': 'What\'s your favorite color?',
@@ -78,17 +79,37 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // Scaffold creates a base page design for you app
+        // Scaffold creates a base page design for your app
         appBar: AppBar(
-          title: Text('My first app'),
+          title: Text('Amazing app'),
+          backgroundColor: Colors.pink[200],
         ),
-        body: _questionIndex < _questions.length
-            ? Quiz(
-                answerQuestion: _answerQuestion,
-                questionIndex: _questionIndex,
-                questions: _questions,
-              )
-            : Result(_totalScore, _resetQuiz),
+        body: Stack(
+          children: [
+            AnimatedBackground(
+              behaviour: RandomParticleBehaviour(
+                options: ParticleOptions(
+                  spawnMaxRadius: 50,
+                  spawnMinSpeed: 10.00,
+                  particleCount: 68,
+                  spawnMaxSpeed: 50,
+                  minOpacity: 0.3,
+                  spawnOpacity: 0.4,
+                  baseColor: Colors.pink[100]!,
+                ),
+              ),
+              vsync: this,
+              child: Container(),
+            ),
+            _questionIndex < _questions.length
+                ? Quiz(
+                    answerQuestion: _answerQuestion,
+                    questionIndex: _questionIndex,
+                    questions: _questions,
+                  )
+                : Result(_totalScore, _resetQuiz),
+          ],
+        ),
       ),
     );
   }
