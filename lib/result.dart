@@ -9,13 +9,13 @@ class Result extends StatelessWidget {
   String get resultPhrase {
     String resultText;
     if (resultScore <= 8) {
-      resultText = 'You are awesome and innocent!';
+      resultText = 'Þvílíkur snillingur ertu!';
     } else if (resultScore <= 12) {
-      resultText = 'Pretty likeable!';
+      resultText = 'Vá þú ert mega cool!';
     } else if (resultScore <= 16) {
-      resultText = 'You are ... strange!';
+      resultText = 'Sælir gefðu hinum smá séns!';
     } else {
-      resultText = 'You are so bad!';
+      resultText = 'Þú ert algjör stjarna!';
     }
     return resultText;
   }
@@ -39,7 +39,7 @@ class Result extends StatelessWidget {
           ),
           TextButton(
             child: Text(
-              'Restart quiz!',
+              'Taka próf aftur',
               style: TextStyle(color: Colors.pink, fontSize: 20),
             ),
             onPressed: resetHandler,

@@ -22,30 +22,30 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   final _questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
+      'questionText': 'Hver er uppáhalds árstíðin þín?',
       'answers': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Green', 'score': 3},
-        {'text': 'White', 'score': 1}
+        {'text': 'Vetur', 'score': 9},
+        {'text': 'Haust', 'score': 5},
+        {'text': 'Vor', 'score': 3},
+        {'text': 'Sumar', 'score': 1}
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'Hvaða borg myndir þú vilja búa í?',
       'answers': [
-        {'text': 'Rabbit', 'score': 2},
-        {'text': 'Snake', 'score': 10},
-        {'text': 'Elephant', 'score': 4},
-        {'text': 'Lion', 'score': 7}
+        {'text': 'London', 'score': 2},
+        {'text': 'Reykjavík', 'score': 8},
+        {'text': 'New York', 'score': 4},
+        {'text': 'Tokyo', 'score': 6}
       ],
     },
     {
-      'questionText': 'Who\'s your favorite instructor?',
+      'questionText': 'Hvað langar þig að vera þegar þú ert orðin stór?',
       'answers': [
-        {'text': 'Max', 'score': 2},
-        {'text': 'John', 'score': 9},
-        {'text': 'Lisa', 'score': 6},
-        {'text': 'Bella', 'score': 4}
+        {'text': 'Risaeðla', 'score': 2},
+        {'text': 'Pípari', 'score': 9},
+        {'text': 'Vélmenni', 'score': 6},
+        {'text': 'Geimfari', 'score': 4}
       ],
     },
   ];
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
       home: Scaffold(
         // Scaffold creates a base page design for your app
         appBar: AppBar(
-          title: Text('Amazing app'),
+          title: Text('Framtíðar appið'),
           backgroundColor: Colors.pink[200],
         ),
         body: Stack(
